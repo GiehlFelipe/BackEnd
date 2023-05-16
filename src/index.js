@@ -16,6 +16,16 @@ app.get('/', (request, response) => {
     return response.status(200).send('<h1>🚀X4BL4U🚀</h1><p>Se voce não X4BL0U não des-X4BL9 o meu X4BL4UM9NT0 ! </p>');
 });
 
+app.get('/listaRecados', (request, response) => {
+
+        const id = parseInt(request.params.id)
+
+        if (isNaN(id) || id <= 0) {
+          return response.status(400).send('Informe um id válido');
+        }
+        response.status(200).json(recadinhos);
+});
+
 app.put('/recados/update/:id', (request, response) => {
     const idAtualiza = request.params.id;
     const atualizaRecado = request.body
