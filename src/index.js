@@ -16,7 +16,7 @@ app.get('/', (request, response) => {
     return response.status(200).send('<h1>🚀X4BL4U🚀</h1><p>Se voce não X4BL0U não des-X4BL9 o meu X4BL4UM9NT0 ! </p>');
 });
 
-app.get('/listaRecados', (request, response) => {
+app.get('/listaRecados/:id', (request, response) => {
 
         const id = parseInt(request.params.id)
 
